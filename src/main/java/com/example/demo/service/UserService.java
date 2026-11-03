@@ -31,6 +31,10 @@ public class UserService {
         return userRepository.save(userModel);
     }
 
+    public Optional<UserModel> findByEmail(String email) {
+        return userRepository.findByEmail(email);
+    }
+
     public Optional<UserModel> findById(Integer id) {
         return userRepository.findById(id);
     }

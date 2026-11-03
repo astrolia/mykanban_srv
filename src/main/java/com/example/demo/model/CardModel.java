@@ -20,11 +20,9 @@ public class CardModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
+    private Integer position;
     private String description;
-    @Enumerated(EnumType.STRING)
-    @Column(name = "card_column")
-    private ColumnsDefault column;
     @ManyToOne
-    @JoinColumn(name = "environment_id")
-    private EnvironmentModel environment;
+    @JoinColumn(name = "column_id")
+    private ColumnModel column;
 }

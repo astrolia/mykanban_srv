@@ -25,7 +25,7 @@ public class EnvironmentModel {
     @JoinColumn(name = "user_id")
     private UserModel owner;
     @OneToMany(mappedBy = "environment", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<CardModel> cards;
+    private List<ColumnModel> columns;
     @Enumerated(EnumType.STRING)
     private EnvironmentType type;
 }
