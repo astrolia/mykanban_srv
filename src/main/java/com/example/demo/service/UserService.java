@@ -42,4 +42,8 @@ public class UserService {
     public void deleteById(Integer id) {
         userRepository.deleteById(id);
     }
+
+    public UserModel update(UserModel userModel) {
+        return userRepository.save(userModel);
+    }
 }
